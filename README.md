@@ -134,7 +134,7 @@ df.pdchart.scatter(x='type', y=['sum', 'size']).render_notebook()
 ```python
 df.pdchart.scatter(x='type', y=['sum', 'size'], effect=True).render_notebook()
 ```
-![](static/images/effectcatter.gif)
+![](static/images/effectScatter.gif)
 
 ### 饼图 - Pie
 
