@@ -7,65 +7,39 @@
 
 </head>
 <body>
-    <div id="679fc90f58ac48b597d2eb51c4deec33" style="width:900px; height:500px;"></div>
+    <div id="813f0298158e4bc2b3b90e8a94f5fb6f" style="width:900px; height:500px;"></div>
     <script>
-        var chart_679fc90f58ac48b597d2eb51c4deec33 = echarts.init(
-            document.getElementById('679fc90f58ac48b597d2eb51c4deec33'), 'white', {renderer: 'canvas'});
-        var option_679fc90f58ac48b597d2eb51c4deec33 = {
-    "color": [
-        "#c23531",
-        "#2f4554",
-        "#61a0a8",
-        "#d48265",
-        "#749f83",
-        "#ca8622",
-        "#bda29a",
-        "#6e7074",
-        "#546570",
-        "#c4ccd3",
-        "#f05b72",
-        "#ef5b9c",
-        "#f47920",
-        "#905a3d",
-        "#fab27b",
-        "#2a5caa",
-        "#444693",
-        "#726930",
-        "#b2d235",
-        "#6d8346",
-        "#ac6767",
-        "#1d953f",
-        "#6950a1",
-        "#918597"
-    ],
+        var chart_813f0298158e4bc2b3b90e8a94f5fb6f = echarts.init(
+            document.getElementById('813f0298158e4bc2b3b90e8a94f5fb6f'), 'light', {renderer: 'canvas'});
+        var option_813f0298158e4bc2b3b90e8a94f5fb6f = {
     "series": [
         {
             "type": "line",
-            "name": "pig",
+            "name": "sum",
             "symbolSize": 4,
             "showSymbol": true,
-            "smooth": false,
+            "smooth": true,
             "step": false,
             "data": [
                 [
                     "1990",
-                    60
+                    100
                 ],
                 [
-                    "1997",
-                    180
+                    "1994",
+                    380
                 ],
                 [
-                    "2003",
-                    489
+                    "1998",
+                    289
                 ],
                 [
-                    "2009",
-                    675
+                    "2000",
+                    460
                 ],
                 [
-                    "2014",
-                    1776
+                    "2004",
+                    150
                 ]
             ],
             "label": {
@@ -86,31 +60,31 @@
         },
         {
             "type": "line",
-            "name": "horse",
+            "name": "size",
             "symbolSize": 4,
             "showSymbol": true,
             "smooth": false,
-            "step": false,
+            "step": true,
             "data": [
                 [
                     "1990",
-                    49
+                    123
                 ],
                 [
-                    "1997",
+                    "1994",
+                    180
+                ],
+                [
+                    "1998",
                     250
                 ],
                 [
-                    "2003",
-                    281
+                    "2000",
+                    90
                 ],
                 [
-                    "2009",
-                    600
-                ],
-                [
-                    "2014",
-                    1900
+                    "2004",
+                    150
                 ]
             ],
             "label": {
@@ -133,12 +107,12 @@
     "legend": [
         {
             "data": [
-                "pig",
-                "horse"
+                "sum",
+                "size"
             ],
             "selected": {
-                "pig": true,
-                "horse": true
+                "sum": true,
+                "size": true
             },
             "show": true
         }
@@ -199,18 +173,48 @@
             },
             "data": [
                 "1990",
-                "1997",
-                "2003",
-                "2009",
-                "2014"
+                "1994",
+                "1998",
+                "2000",
+                "2004"
             ]
         }
     ],
     "title": {
         "text": "Line"
+    },
+    "toolbox": {
+        "show": true,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "saveAsImage": {
+                "show": true,
+                "title": "save as image",
+                "type": "png"
+            },
+            "restore": {
+                "show": true,
+                "title": "restore"
+            },
+            "dataView": {
+                "show": true,
+                "title": "data view",
+                "readOnly": false
+            },
+            "dataZoom": {
+                "show": true,
+                "title": {
+                    "zoom": "data zoom",
+                    "back": "data zoom restore"
+                }
+            }
+        }
     }
 };
-        chart_679fc90f58ac48b597d2eb51c4deec33.setOption(option_679fc90f58ac48b597d2eb51c4deec33);
+        chart_813f0298158e4bc2b3b90e8a94f5fb6f.setOption(option_813f0298158e4bc2b3b90e8a94f5fb6f);
     </script>
 </body>
 </html>

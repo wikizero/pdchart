@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="65770464372c457488d588f0c891c36f" style="width:900px; height:500px;"></div>
+    <div id="893ebcb3d6424744ab70e72e4767c4b9" style="width:900px; height:500px;"></div>
     <script>
-        var chart_65770464372c457488d588f0c891c36f = echarts.init(
-            document.getElementById('65770464372c457488d588f0c891c36f'), 'white', {renderer: 'canvas'});
-        var option_65770464372c457488d588f0c891c36f = {
+        var chart_893ebcb3d6424744ab70e72e4767c4b9 = echarts.init(
+            document.getElementById('893ebcb3d6424744ab70e72e4767c4b9'), 'white', {renderer: 'canvas'});
+        var option_893ebcb3d6424744ab70e72e4767c4b9 = {
     "color": [
         "#c23531",
         "#2f4554",
@@ -56,35 +56,15 @@
                 "margin": 8,
                 "fontSize": 12
             }
-        },
-        {
-            "type": "bar",
-            "name": "horse",
-            "data": [
-                49,
-                250,
-                281,
-                600,
-                1900
-            ],
-            "barCategoryGap": "20%",
-            "label": {
-                "show": true,
-                "position": "top",
-                "margin": 8,
-                "fontSize": 12
-            }
         }
     ],
     "legend": [
         {
             "data": [
-                "pig",
-                "horse"
+                "pig"
             ],
             "selected": {
-                "pig": true,
-                "horse": true
+                "pig": true
             },
             "show": true
         }
@@ -144,19 +124,49 @@
                 }
             },
             "data": [
-                "1990",
-                "1997",
-                "2003",
-                "2009",
-                "2014"
+                "ie",
+                "firefox",
+                "safari",
+                "chrome",
+                "edge"
             ]
         }
     ],
     "title": {
         "text": "Bar"
+    },
+    "toolbox": {
+        "show": true,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "saveAsImage": {
+                "show": true,
+                "title": "save as image",
+                "type": "png"
+            },
+            "restore": {
+                "show": true,
+                "title": "restore"
+            },
+            "dataView": {
+                "show": true,
+                "title": "data view",
+                "readOnly": false
+            },
+            "dataZoom": {
+                "show": true,
+                "title": {
+                    "zoom": "data zoom",
+                    "back": "data zoom restore"
+                }
+            }
+        }
     }
 };
-        chart_65770464372c457488d588f0c891c36f.setOption(option_65770464372c457488d588f0c891c36f);
+        chart_893ebcb3d6424744ab70e72e4767c4b9.setOption(option_893ebcb3d6424744ab70e72e4767c4b9);
     </script>
 </body>
 </html>

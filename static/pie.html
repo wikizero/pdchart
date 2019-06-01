@@ -7,109 +7,276 @@
 
 </head>
 <body>
-    <div id="8e01d140a3f64810a45816fac27b7e91" style="width:900px; height:500px;"></div>
+    <div id="6bed4690feb748b79b2606ab463dec8c" style="width:900px; height:500px;"></div>
     <script>
-        var chart_8e01d140a3f64810a45816fac27b7e91 = echarts.init(
-            document.getElementById('8e01d140a3f64810a45816fac27b7e91'), 'white', {renderer: 'canvas'});
-        var option_8e01d140a3f64810a45816fac27b7e91 = {
-    "color": [
-        "#c23531",
-        "#2f4554",
-        "#61a0a8",
-        "#d48265",
-        "#749f83",
-        "#ca8622",
-        "#bda29a",
-        "#6e7074",
-        "#546570",
-        "#c4ccd3",
-        "#f05b72",
-        "#ef5b9c",
-        "#f47920",
-        "#905a3d",
-        "#fab27b",
-        "#2a5caa",
-        "#444693",
-        "#726930",
-        "#b2d235",
-        "#6d8346",
-        "#ac6767",
-        "#1d953f",
-        "#6950a1",
-        "#918597"
-    ],
-    "series": [
-        {
-            "type": "pie",
-            "clockwise": true,
+        var chart_6bed4690feb748b79b2606ab463dec8c = echarts.init(
+            document.getElementById('6bed4690feb748b79b2606ab463dec8c'), 'white', {renderer: 'canvas'});
+        var option_6bed4690feb748b79b2606ab463dec8c = {
+    "baseOption": {
+        "series": [
+            {
+                "type": "pie",
+                "clockwise": true,
+                "data": [
+                    {
+                        "name": "firefox",
+                        "value": 650
+                    },
+                    {
+                        "name": "safari",
+                        "value": 600
+                    },
+                    {
+                        "name": "chrome",
+                        "value": 208
+                    },
+                    {
+                        "name": "edge",
+                        "value": 390
+                    }
+                ],
+                "radius": [
+                    "30%",
+                    "55%"
+                ],
+                "center": [
+                    "50%",
+                    "50%"
+                ],
+                "roseType": "radius",
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8,
+                    "fontSize": 12
+                }
+            }
+        ],
+        "timeline": {
+            "axisType": "category",
+            "orient": "horizontal",
+            "autoPlay": false,
+            "loop": true,
+            "rewind": false,
+            "show": true,
+            "inverse": true,
+            "bottom": "-5px",
             "data": [
+                "2001\u5e74",
+                "2002\u5e74",
+                "2003\u5e74",
+                "2004\u5e74"
+            ]
+        }
+    },
+    "options": [
+        {
+            "legend": [
                 {
-                    "name": "1990",
-                    "value": 49
-                },
-                {
-                    "name": "1997",
-                    "value": 250
-                },
-                {
-                    "name": "2003",
-                    "value": 281
-                },
-                {
-                    "name": "2009",
-                    "value": 600
-                },
-                {
-                    "name": "2014",
-                    "value": 1900
+                    "data": [
+                        "firefox",
+                        "safari",
+                        "chrome",
+                        "edge"
+                    ],
+                    "selected": {},
+                    "show": true
                 }
             ],
-            "radius": [
-                "0%",
-                "75%"
+            "series": [
+                {
+                    "data": [
+                        {
+                            "name": "firefox",
+                            "value": 490
+                        },
+                        {
+                            "name": "safari",
+                            "value": 190
+                        },
+                        {
+                            "name": "chrome",
+                            "value": 290
+                        },
+                        {
+                            "name": "edge",
+                            "value": 190
+                        }
+                    ]
+                }
             ],
-            "center": [
-                "50%",
-                "50%"
-            ],
-            "label": {
+            "title": {
+                "text": "Pie"
+            },
+            "tooltip": {
                 "show": true,
-                "position": "top",
-                "margin": 8,
-                "fontSize": 12
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            }
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "firefox",
+                        "safari",
+                        "chrome",
+                        "edge"
+                    ],
+                    "selected": {},
+                    "show": true
+                }
+            ],
+            "series": [
+                {
+                    "data": [
+                        {
+                            "name": "firefox",
+                            "value": 250
+                        },
+                        {
+                            "name": "safari",
+                            "value": 250
+                        },
+                        {
+                            "name": "chrome",
+                            "value": 250
+                        },
+                        {
+                            "name": "edge",
+                            "value": 250
+                        }
+                    ]
+                }
+            ],
+            "title": {
+                "text": "Pie"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            }
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "firefox",
+                        "safari",
+                        "chrome",
+                        "edge"
+                    ],
+                    "selected": {},
+                    "show": true
+                }
+            ],
+            "series": [
+                {
+                    "data": [
+                        {
+                            "name": "firefox",
+                            "value": 271
+                        },
+                        {
+                            "name": "safari",
+                            "value": 289
+                        },
+                        {
+                            "name": "chrome",
+                            "value": 181
+                        },
+                        {
+                            "name": "edge",
+                            "value": 291
+                        }
+                    ]
+                }
+            ],
+            "title": {
+                "text": "Pie"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            }
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "firefox",
+                        "safari",
+                        "chrome",
+                        "edge"
+                    ],
+                    "selected": {},
+                    "show": true
+                }
+            ],
+            "series": [
+                {
+                    "data": [
+                        {
+                            "name": "firefox",
+                            "value": 650
+                        },
+                        {
+                            "name": "safari",
+                            "value": 600
+                        },
+                        {
+                            "name": "chrome",
+                            "value": 208
+                        },
+                        {
+                            "name": "edge",
+                            "value": 390
+                        }
+                    ]
+                }
+            ],
+            "title": {
+                "text": "Pie"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
             }
         }
-    ],
-    "legend": [
-        {
-            "data": [
-                "1990",
-                "1997",
-                "2003",
-                "2009",
-                "2014"
-            ],
-            "selected": {},
-            "show": true
-        }
-    ],
-    "tooltip": {
-        "show": true,
-        "trigger": "item",
-        "triggerOn": "mousemove|click",
-        "axisPointer": {
-            "type": "line"
-        },
-        "textStyle": {
-            "fontSize": 14
-        },
-        "borderWidth": 0
-    },
-    "title": {
-        "text": "Pie"
-    }
+    ]
 };
-        chart_8e01d140a3f64810a45816fac27b7e91.setOption(option_8e01d140a3f64810a45816fac27b7e91);
+        chart_6bed4690feb748b79b2606ab463dec8c.setOption(option_6bed4690feb748b79b2606ab463dec8c);
     </script>
 </body>
 </html>

@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="36b54104415a4f36918ea284bea59ba4" style="width:900px; height:500px;"></div>
+    <div id="3c9e5ab0261344bc8690624700b7cb7f" style="width:900px; height:500px;"></div>
     <script>
-        var chart_36b54104415a4f36918ea284bea59ba4 = echarts.init(
-            document.getElementById('36b54104415a4f36918ea284bea59ba4'), 'white', {renderer: 'canvas'});
-        var option_36b54104415a4f36918ea284bea59ba4 = {
+        var chart_3c9e5ab0261344bc8690624700b7cb7f = echarts.init(
+            document.getElementById('3c9e5ab0261344bc8690624700b7cb7f'), 'white', {renderer: 'canvas'});
+        var option_3c9e5ab0261344bc8690624700b7cb7f = {
     "color": [
         "#c23531",
         "#2f4554",
@@ -118,17 +118,59 @@
                 "margin": 8,
                 "fontSize": 12
             }
+        },
+        {
+            "type": "effectScatter",
+            "name": "type",
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbolSize": 10,
+            "data": [
+                [
+                    "1990",
+                    "ie"
+                ],
+                [
+                    "1997",
+                    "firefox"
+                ],
+                [
+                    "2003",
+                    "safari"
+                ],
+                [
+                    "2009",
+                    "chrome"
+                ],
+                [
+                    "2014",
+                    "edge"
+                ]
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "fontSize": 12
+            }
         }
     ],
     "legend": [
         {
             "data": [
                 "pig",
-                "horse"
+                "horse",
+                "type"
             ],
             "selected": {
                 "pig": true,
-                "horse": true
+                "horse": true,
+                "type": true
             },
             "show": true
         }
@@ -200,7 +242,7 @@
         "text": "Effectscatter"
     }
 };
-        chart_36b54104415a4f36918ea284bea59ba4.setOption(option_36b54104415a4f36918ea284bea59ba4);
+        chart_3c9e5ab0261344bc8690624700b7cb7f.setOption(option_3c9e5ab0261344bc8690624700b7cb7f);
     </script>
 </body>
 </html>
