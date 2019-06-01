@@ -1,5 +1,5 @@
 
-#### pdchart 简介
+### pdchart 简介
 pdchart是属于pandas的一款扩展工具，基于pandas、pyecharts基础上开发，它可以快速将你的dataframe、series数据进行可视化，并且图表比pandas原生支持的图表更精美、灵活、强大。要更好的使用pdchart您首先要对pandas、pyecharts这两款工具有一定了解，pdchart的参数配置基本是基于pyecharts封装。
 
 [pandas 官网](http://pandas.pydata.org/)
@@ -82,7 +82,7 @@ df
 
 
 
-#### 折线图 - Line
+### 折线图 - Line
 
 
 ```python
@@ -112,7 +112,7 @@ df.pdchart.line(x='type', y=['sum', 'size'],
 # 更多的配置参数以请参考pyecharts文档
 ```
 ![](static/images/Line2.png)
-#### 柱状图 - Bar
+### 柱状图 - Bar
 
 
 ```python
@@ -120,7 +120,7 @@ df.pdchart.bar(x='year', y=['sum', 'size']).render_notebook()
 ```
 ![](static/images/Bar.png)
 
-#### 散点图 - Scatter
+### 散点图 - Scatter
 
 
 ```python
@@ -129,14 +129,14 @@ df.pdchart.scatter(x='type', y=['sum', 'size']).render_notebook()
 
 ![](static/images/Scatter.png)
 
-#### 涟漪散点图 - effectScatter
+### 涟漪散点图 - effectScatter
 
 ```python
 df.pdchart.scatter(x='type', y=['sum', 'size'], effect=True).render_notebook()
 ```
-![](static/images/Effectscatter.png)
+![](static/images/effectscatter.gif)
 
-#### 饼图 - Pie
+### 饼图 - Pie
 
 
 ```python
@@ -145,7 +145,7 @@ df.set_index('type')['sum'].pdchart.pie().render_notebook()
 ![](static/images/Pie.png)
 
 
-#### 词云图 - wordCloud
+### 词云图 - wordCloud
 
 
 ```python
@@ -228,7 +228,7 @@ new_df.pdchart.wordCloud(label='name', value='num').render_notebook()
 ![](static/images/Wordcloud.png)
 
 
-#### 时序图 - timeline
+### 时序图 - timeline
 
 
 ```python
@@ -321,7 +321,7 @@ mdf.pdchart.pie(label='type', value='size', timeline='year',
 ![](static/images/timeline_pie.png)
 
 
-#### 3D 图表 
+### 3D 图表 
 
 开发中......
 
