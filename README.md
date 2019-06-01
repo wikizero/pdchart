@@ -1,8 +1,6 @@
 
 #### pdchart 简介
-pdchart可以快速将你的dataframe、series数据进行可视化，并且图表比pandas原生支持的图表更精美、灵活、强大.
-
-pdchart是属于pandas的一款扩展工具，基于pandas、pyecharts基础上开发，要更好的使用pdchart您首先要对这两款工具有一定了解，pdchart的参数配置基本是基于pyecharts封装.
+pdchart是属于pandas的一款扩展工具，基于pandas、pyecharts基础上开发，它可以快速将你的dataframe、series数据进行可视化，并且图表比pandas原生支持的图表更精美、灵活、强大。要更好的使用pdchart您首先要对pandas、pyecharts这两款工具有一定了解，pdchart的参数配置基本是基于pyecharts封装。
 
 [pandas 官网](http://pandas.pydata.org/)
 
