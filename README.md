@@ -146,11 +146,10 @@ df.pdchart.scatter(x='type', y=['sum', 'size']).render_notebook()
 
 #### 涟漪散点图 - effectScatter
 
-
 ```python
 df.pdchart.scatter(x='type', y=['sum', 'size'], effect=True).render_notebook()
 ```
-![](static/images/EffectScatter.png)
+![](static/images/Effectscatter.png)
 
 #### 饼图 - Pie
 
