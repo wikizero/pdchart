@@ -134,7 +134,7 @@ df.pdchart.scatter(x='type', y=['sum', 'size']).render_notebook()
 ```python
 df.pdchart.scatter(x='type', y=['sum', 'size'], effect=True).render_notebook()
 ```
-![](static/images/effectscatter.gif)
+![](static/images/effectcatter.gif)
 
 ### 饼图 - Pie
 
@@ -305,20 +305,20 @@ mdf.head(5)
 ```python
 mdf.pdchart.bar(x='type', y=['size', 'sum'], timeline='year').render_notebook()
 ```
-![](static/images/timeline_bar.png)
+![](static/images/timeline_bar.gif)
 
 
 ```python
 mdf.pdchart.line(x='type', y=['size', 'sum'], timeline='year').render_notebook()
 ```
-![](static/images/timeline_line.png)
+![](static/images/timeline_line.gif)
 
 
 ```python
 mdf.pdchart.pie(label='type', value='size', timeline='year', 
                  val_opts={'rosetype': 'radius', 'radius': ["30%", "55%"]}).render_notebook()
 ```
-![](static/images/timeline_pie.png)
+![](static/images/timeline_pie.gif)
 
 
 ### 3D 图表 
