@@ -253,7 +253,7 @@ new_df.head(5)
 ```python
 new_df.pdchart.wordCloud(label='name', value='num').render_notebook()
 ```
-![](static/images/WordCloud.png)
+![](static/images/Wordcloud.png)
 
 
 #### 时序图 - timeline
