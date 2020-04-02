@@ -38,11 +38,11 @@ print(f)
 
 f = pd.DataFrame({
     'year': [str(i) + '年' for i in
-             [2001, 2002, 2003, 2004, 2001, 2002, 2003, 2004, 2001, 2002, 2003, 2004, 2001, 2002, 2003, 2004]],
-    'horse': [490, 250, 271, 650, 190, 250, 289, 600, 290, 250, 181, 208, 190, 250, 291, 390],
-    'pig': [190, 350, 278, 450, 290, 290, 289, 600, 390, 150, 181, 258, 290, 550, 391, 280],
+             [2001, 2002, 2003, 2004, 2001, 2002, 2003, 2004, 2001, 2002, 2003, 2004, 2001, 2002, 2003, 2004, 2005]],
+    'sum': [490, 250, 271, 650, 190, 250, 289, 600, 290, 250, 181, 208, 190, 250, 291, 390, 812],
+    'size': [190, 350, 278, 450, 290, 290, 289, 600, 390, 150, 181, 258, 290, 550, 391, 280, 891],
     'type': ['firefox', 'firefox', 'firefox', 'firefox', 'safari', 'safari', 'safari', 'safari', 'chrome', 'chrome',
-             'chrome', 'chrome', 'edge', 'edge', 'edge', 'edge']
+             'chrome', 'chrome', 'edge', 'edge', 'edge', 'edge', 'edge']
 })
 
 # print(f)
@@ -63,28 +63,32 @@ import matplotlib
 #                 init_opts={'theme': ThemeType.LIGHT},
 #                 y_opts={'sum':{'is_smooth':True}, 'size':{'is_step':True}}).render('static/line.html')
 
-words = [
-    ("Sam S Club", 10000),
-    ("Macys", 6181),
-    ("Amy Schumer", 4386),
-    ("Jurassic World", 4055),
-    ("Charter Communications", 2467),
-    ("Chick Fil A", 2244),
-    ("Planet Fitness", 1868),
-    ("Pitch Perfect", 1484),
-    ("Express", 1112),
-    ("Home", 865),
-    ("Johnny Depp", 847),
-    ("Lena Dunham", 582),
-    ("Lewis Hamilton", 555),
-    ("KXAN", 550),
-    ("Mary Ellen Mark", 462),
-    ("Farrah Abraham", 366),
-    ("Rita Ora", 360),
-    ("Serena Williams", 282),
-    ("NCAA baseball tournament", 273),
-    ("Point Break", 265),
-]
+# words = [
+#     ("Sam S Club", 10000),
+#     ("Macys", 6181),
+#     ("Amy Schumer", 4386),
+#     ("Jurassic World", 4055),
+#     ("Charter Communications", 2467),
+#     ("Chick Fil A", 2244),
+#     ("Planet Fitness", 1868),
+#     ("Pitch Perfect", 1484),
+#     ("Express", 1112),
+#     ("Home", 865),
+#     ("Johnny Depp", 847),
+#     ("Lena Dunham", 582),
+#     ("Lewis Hamilton", 555),
+#     ("KXAN", 550),
+#     ("Mary Ellen Mark", 462),
+#     ("Farrah Abraham", 366),
+#     ("Rita Ora", 360),
+#     ("Serena Williams", 282),
+#     ("NCAA baseball tournament", 273),
+#     ("Point Break", 265),
+# ]
+#
+# new_df = pd.DataFrame(words, columns=['name', 'num'])
+# print(new_df)
+# print(dir(new_df.style))
 
-new_df = pd.DataFrame(words, columns=['name', 'num'])
-print(new_df)
+print(f)
+f.pdchart.barh(x='year', y='sum', groupby='type').render('static/_line.html')

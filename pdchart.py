@@ -31,11 +31,19 @@ class BaseAccessor(object):
         # 获取配置
         init_opts = kwargs.get('init_opts', {})
         y_opts = kwargs.get('y_opts', {})
+        series_opts = kwargs.get('series_opts', {})
         default_global_opts = {'title_opts': {'text': kind.title()}, 'toolbox_opts': opts.ToolboxOpts(is_show=True)}
         global_opts = kwargs.get('global_opts', default_global_opts)
 
         # 初始化图表
         c = self.chart_xy.get(kind)(opts.InitOpts(**init_opts))
+
+        # get groupby key
+        groupby = kwargs.get('groupby')
+        if groupby:
+            # TODO y 支持多个key， 考虑使用组合表？
+            mdf = mdf.pivot_table(index=x, columns=groupby, values=y, fill_value=0)
+            x = y = None
 
         # x轴标签
         x_data = mdf[x].astype('str').tolist() if x else mdf.index.astype('str').tolist()
@@ -50,6 +58,7 @@ class BaseAccessor(object):
 
         for k, col in y_data.iteritems():
             # 支持通配符的模式匹配配置选项
+            print(k)
             _opts = {}
             for opts_key, opts_val in y_opts.items():
                 if fnmatch(k, opts_key):
@@ -57,8 +66,11 @@ class BaseAccessor(object):
             # 添加y轴的值
             c.add_yaxis(k, col.tolist(), **_opts)
 
-        # 默认配置
+        # 设置配置
+        print(series_opts)
+        c = c.set_series_opts(label_opts=opts.LabelOpts(position="right"))
         c = c.set_global_opts(**global_opts)
+        c.reversal_axis()
 
         return c
 
@@ -119,6 +131,16 @@ class BaseAccessor(object):
         # 柱状图
         return self.plot_func(self.plot_xy, x=x, y=y, kind='bar', **kwargs)
 
+    def barh(self, x=None, y=None, **kwargs):
+        # 柱状图
+        # if 'series_opts' in kwargs:
+        #     kwargs['label_opts'].position = 'right'
+        # else:
+        # TODO 优化
+        kwargs['series_opts'] = {'label_opts': opts.LabelOpts(position='right')}
+
+        return self.plot_func(self.plot_xy, x=x, y=y, kind='bar', **kwargs)
+
     def scatter(self, x=None, y=None, effect=False, **kwargs):
         # 涟漪散点图 & 散点图
         if effect:
@@ -134,6 +156,9 @@ class BaseAccessor(object):
         # 词云图
         return self.plot_func(self.plot_basic, label=label, value=value, kind='wordCloud', **kwargs)
 
+    def boxplot(self, columns=None, **kwargs):
+        pass
+
 
 @pd.api.extensions.register_dataframe_accessor('pdchart')
 class PdChartFrameAccessor(BaseAccessor):
@@ -143,6 +168,7 @@ class PdChartFrameAccessor(BaseAccessor):
         self.chart_xy = {
             'line': charts.Line,
             'bar': charts.Bar,
+            'barh': charts.Bar,
             'scatter': charts.Scatter,
             'effectScatter': charts.EffectScatter,
         }
@@ -172,4 +198,3 @@ class PdChartSeriesAccessor(BaseAccessor):
             'wordCloud': charts.WordCloud
         }
         super(BaseAccessor, self).__init__()
-
