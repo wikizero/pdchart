@@ -91,4 +91,4 @@ import matplotlib
 # print(dir(new_df.style))
 
 print(f)
-f.pdchart.barh(x='year', y='sum', groupby='type').render('static/_line.html')
+f.pdchart.line(x='year', y='sum', groupby='type').render('static/_line.html')

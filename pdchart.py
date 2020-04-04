@@ -66,11 +66,12 @@ class BaseAccessor(object):
             # 添加y轴的值
             c.add_yaxis(k, col.tolist(), **_opts)
 
+        if kind == 'barh':
+            c.reversal_axis()
+
         # 设置配置
-        print(series_opts)
-        c = c.set_series_opts(label_opts=opts.LabelOpts(position="right"))
-        c = c.set_global_opts(**global_opts)
-        c.reversal_axis()
+        c.set_series_opts(**series_opts)
+        c.set_global_opts(**global_opts)
 
         return c
 
@@ -132,14 +133,13 @@ class BaseAccessor(object):
         return self.plot_func(self.plot_xy, x=x, y=y, kind='bar', **kwargs)
 
     def barh(self, x=None, y=None, **kwargs):
-        # 柱状图
-        # if 'series_opts' in kwargs:
-        #     kwargs['label_opts'].position = 'right'
-        # else:
         # TODO 优化
-        kwargs['series_opts'] = {'label_opts': opts.LabelOpts(position='right')}
+        if 'series_opts' not in kwargs:
+            kwargs['series_opts'] = {'label_opts': opts.LabelOpts(position='right')}
+        elif 'label_opts' not in kwargs['series_opts']:
+            kwargs['series_opts']['label_opts'] = opts.LabelOpts(position='right')
 
-        return self.plot_func(self.plot_xy, x=x, y=y, kind='bar', **kwargs)
+        return self.plot_func(self.plot_xy, x=x, y=y, kind='barh', **kwargs)
 
     def scatter(self, x=None, y=None, effect=False, **kwargs):
         # 涟漪散点图 & 散点图

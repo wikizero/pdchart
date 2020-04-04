@@ -321,6 +321,27 @@ mdf.pdchart.pie(label='type', value='size', timeline='year',
 ![](static/images/timeline_pie.gif)
 
 
+#### 2020/04/04 更新
+支持barh、groupby 用法如下：
+
+### 横向柱状图 - barh
+```python
+mdf.pdchart.barh(x='year', y='sum').render_notebook()
+```
+![](static/images/barh.png)
+
+### 各个图表 groupby demo
+```python
+mdf.pdchart.bar(x='year', y='sum', groupby='type').render_notebook()
+```
+![](static/images/bar-groupby.png)
+
+```python
+mdf.pdchart.line(x='year', y='sum', groupby='type').render_notebook()
+```
+![](static/images/line-groupby.png)
+
+另外groupby同样支持 barh、scatter、effectScatter，这里不统一演示。
 ### 3D 图表 
 
 开发中......
